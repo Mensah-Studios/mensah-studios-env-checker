@@ -22,7 +22,14 @@ default: &default
 
 development:
   <<: *default
-  database: backend_development
+  adapter: postgresql
+  database: mensah-studios-env-db
+  username: postgres
+  password: 275067536
+  host: localhost
+  port: 4567
+  
+
 
   # The specified database role being used to connect to PostgreSQL.
   # To create additional roles in PostgreSQL see `$ createuser --help`.
@@ -77,6 +84,7 @@ test:
 #
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
 # for a full overview on how database connection configuration can be specified.
+
 #
 production:
   primary: &primary_production
